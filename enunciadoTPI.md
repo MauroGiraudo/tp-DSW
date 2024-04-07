@@ -4,7 +4,7 @@ Integrantes:
 | :----- | :-------- | ------------- |
 | 51278  | Giraudo   | Mauro Facundo |
 | 50469  | Pastorino | Juan José     |
-| 123    | González  | Tomás         |
+| 50707  | González  | Tomás         |
 
 Descripción:
 
