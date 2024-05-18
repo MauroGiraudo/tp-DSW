@@ -24,7 +24,7 @@ Nuestro proyectó tratará de una aplicación para un restaurante que permitirá
 
 ### Modelo
 
-- [Modelo de Dominio](https://github.com/MauroGiraudo/tp-DSW/blob/main/Modelo_de_Dominio_Premilimar_TP_DSW.drawio.pdf)
+- [Modelo de Dominio](https://drive.google.com/drive/folders/1Gl5JQgvYNaK7awIbvqVYGqJqiM9sf3kV?usp=sharing)
 
 ## Alcance Funcional
 
