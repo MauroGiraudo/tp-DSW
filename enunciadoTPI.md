@@ -10,7 +10,9 @@ Descripción:
 
 Nuestro proyectó tratará de una aplicación para un restaurante que permitirá a los clientes, entre otras funcionalidades, registrarse e iniciar sesión (identificarse) y realizar pedidos, armándolos con los distintos platos disponibles. Estos tienen la posibilidad de ser cancelados en cualquier momento antes de la hora de la entrega.
 
-Repositorios: \*[backend app](https://github.com/MauroGiraudo/tp-DSW/tree/Put-Function/back_end)
+Repositorios:
+
+- [backend app](https://github.com/MauroGiraudo/tp-DSW/tree/Put-Function/back_end)
 
 Alcance:
 
