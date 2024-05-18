@@ -1,4 +1,8 @@
-Integrantes:
+# Propuesta TP DSW
+
+## Grupo
+
+### Integrantes
 
 | Legajo | Apellido  | Nombre/s      |
 | :----- | :-------- | ------------- |
@@ -6,15 +10,25 @@ Integrantes:
 | 50469  | Pastorino | Juan José     |
 | 50707  | González  | Tomás         |
 
-Descripción:
+### Repositorios
+
+- [backend app](https://github.com/MauroGiraudo/tp_DSW_backend/tree/main)
+
+* [frontend app](https://github.com/MauroGiraudo/tp_DSW_frontend)
+
+## Tema
+
+### Descripción
 
 Nuestro proyectó tratará de una aplicación para un restaurante que permitirá a los clientes, entre otras funcionalidades, registrarse e iniciar sesión (identificarse) y realizar pedidos, armándolos con los distintos platos disponibles. Estos tienen la posibilidad de ser cancelados en cualquier momento antes de la hora de la entrega.
 
-Repositorios:
+### Modelo
 
-- [backend app](https://github.com/MauroGiraudo/tp-DSW/tree/Put-Function/back_end)
+- [Modelo de Dominio](https://github.com/MauroGiraudo/tp-DSW/blob/main/Modelo_de_Dominio_Premilimar_TP_DSW.drawio.pdf)
 
-Alcance:
+## Alcance Funcional
+
+### Alcance Mínimo
 
 | Req               | Detalle                                                                                                                                                                                                                                                                                                                                     |
 | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
