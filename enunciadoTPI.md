@@ -26,6 +26,8 @@ Nuestro proyectó tratará de una aplicación para un restaurante que permitirá
 
 - [Modelo de Dominio](https://drive.google.com/drive/folders/1Gl5JQgvYNaK7awIbvqVYGqJqiM9sf3kV?usp=sharing)
 
+-[Modelo Entidad Relacion](https://drive.google.com/drive/folders/1Gl5JQgvYNaK7awIbvqVYGqJqiM9sf3kV?usp=sharing)
+
 ## Alcance Funcional
 
 ### Alcance Mínimo
