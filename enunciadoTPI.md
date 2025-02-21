@@ -16,11 +16,33 @@
 
 * [frontend app](https://github.com/MauroGiraudo/tp_DSW_frontend)
 
+### Instrucciones
+
+Backend:
+
+1- Clonar el proyecto back-end en nuestro dispositivo. Para ello nos dirigimos al repositorio, presionamos "Code" y copiamos la URL del mismo. Luego, utilizamos la URL para clonar el repositorio con nuestro editor de código preferido (Para Visual Studio Code: >Git: Clone. Luego ingresamos la URL copiada).
+
+2- Una vez descargado el proyecto, ingresamos el comando "pnpm install" en la terminal para descargar todas las dependencias necesarias para la ejecución del back-end.
+
+3- Finalmente, escribimos el comando "pnpm start:dev" para iniciar el back-end.
+
+Frontend:
+
+1- Al igual que en el caso anterior, clonaremos el proyecto en nuestro dispositivo (Leer "Backend(1)").
+
+2- Ingresamos el comando "pnpm install" para descargar todas las dependencias necesarias.
+
+3- Escribimos el comando "ng serve --open" para iniciar el front-end.
+
+### Video
+
+- [Link](https://youtu.be/B_4w19BfPgw)
+
 ## Tema
 
 ### Descripción
 
-Nuestro proyectó tratará de una aplicación para un restaurante que permitirá a los clientes, entre otras funcionalidades, registrarse e iniciar sesión (identificarse) y realizar pedidos, armándolos con los distintos platos disponibles. Estos tienen la posibilidad de ser cancelados en cualquier momento antes de la hora de la entrega.
+Nuestro proyectó trata de una aplicación para un restaurante que permitirá a los clientes, entre otras funcionalidades, registrarse e iniciar sesión (identificarse) y realizar pedidos, armándolos con los distintos platos y bebidas disponibles.
 
 ### Modelo
 
