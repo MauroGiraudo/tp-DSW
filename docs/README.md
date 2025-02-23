@@ -390,3 +390,175 @@ Esta URL corresponde a la utilizada por el framework "Cypress" para realizar los
 
 # Minutas de Avance (Front-end)
 
+## Semana del 13/05/24:
+
+- Repositorio inicializado
+
+## Semana del 24/06/24:
+
+- Boilerplate iniciado
+
+## Semana del 26/08/24:
+
+- Se crearon los componentes de las entidades "Cliente", "Ingrediente", "Pedido", "Plato", "Proveedor" y "TipoPlato", mas no se desarrolló su contenido.
+
+## Semana del 02/09/24:
+
+- Se eliminaron los componentes "Ingrediente", "Pedido", "Plato", "Proveedor" y "TipoPlato"
+
+- Se crearon los componentes "Home" y "Login"
+
+- Se creó la carpeta "Service" para almacenar los servicios de nuestra aplicación (consumo de los recursos del back-end)
+
+- Se creó el servicio para las operaciones asociadas a la entidad "Plato"
+
+## Semana del 09/09/24:
+
+- Se creó una barra de navegación que permite al usuario desplazarse entre todas las funcionalidades disponibles. La misma se encuentra del lado izquierdo de la pantalla y puede ser desplegada presionando en botón que se encuentra en la esquina superior izquierda de la página web. Se encuentra desarrollada dentro del componente "Side-nav".
+
+Aún falta agregar los demás componentes de la aplicación y sus rutas correspondientes
+
+- Se crearon los componentes "Carta" y "Main"
+
+- Se movió el contenido del componente "Home" al componente "Carta"
+
+## Semana del 16/09/24:
+
+- Se creó el componente "Pedido".
+
+## Semana del 30/09/24:
+
+- Se modificó el componente "Home" con una breve descripción de la historia del negocio
+
+- Se muestra la lista de platos registrados en el sistema en el componente "Carta". Estos cuentan con una animación que, cuando se posiciona el mouse sobre el plato en cuestión, este se voltea y muestra información adicional.
+
+- El componente pedido muestra correctamente los platos que fueron agregados al pedido por el cliente (una vez que el pedido fue creado)
+
+- Se creó el componente "Registro" (falta su desarrollo)
+
+## Semana del 07/10/24:
+
+- Se desarrolló el componente "Registro". A su vez se creó y desarrolló el componente "Login" (aún no funcionan)
+
+- Se incorporó el campo "tipoUsuario" al formulario de registro.
+
+- Las interfaces para el registro e inicio de sesión fueron implementadas y funcionan correctamente.
+
+- Las rutas para acceder a ambos deben asignarse a la barra lateral.
+También deberíamos mostrar la opción de "Iniciar Sesión" únicamente cuando el usuario no la inició aún. Luego, debería permanecer "invisible".
+
+## Semana del 21/10/24:
+
+- Se creó el componente "Mesa" junto con su estructura, estilos y funcionalidad.
+
+## Semana del 28/10/24:
+
+- Se incorporaron submenús a la barra de navegación lateral
+
+- Se creó el componente "Carta-Bebida", en el cual se muestran las bebidas registradas en el sistema con el mismo formato de los platos.
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Proveedor" (sólo empleados)
+
+## Semana del 04/11/24:
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Mesa" (se modificó el nombre del componente "Mesa" a "Mesa-Lista") 
+
+- Ahora, cuando el usuario se registra, lo redirecciona a la página de inicio de sesión
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Bebida"
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "TipoPlato"
+
+## Semana del 11/11/24:
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Pedido" (asociado al CU: Realizar Pedido)
+
+- Se incorporó un detalle de los datos del cliente en la opción "Cuenta" del menú de navegación (componente "Cliente")
+
+- Se mejoró el filtro de la barra de navegación lateral
+
+- Ahora, si el usuario es un empleado, se muestra el stock de bebidas en la carta de bebidas
+
+- Ahora es posible cancelar un pedido si el mismo se encuentra vacío o los productos solicitados aún no fueron entregados
+
+- Se incorporó un listado con los pedidos del cliente cuya sesión se encuentra iniciada.
+
+- Se mejoró la estética del código
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Ingrediente"
+
+- Se incorporó un filtro para visualizar los ingredientes cuyo stock sea mayor / menor al punto de pedido (sólo empleados)
+
+- Se incorporó un filtro al listado de pedidos del cliente que permite ver los pedidos en curso / cancelados / finalizados
+
+- Se crearon los componentes para las operaciones CRUD de la entidad "Tarjeta" (falta desarrollar)
+
+## Semana del 03/02/25:
+
+- Se desarrollaron los componentes del CRUD de la entidad "Tarjeta"
+
+- Se crearon los componentes del CRUD de la entidad "Plato" (falta "delete")
+
+- Se incorporaron a la barra de navegación lateral las funciones: (faltan desarrollar)
+  - Ver reseñas
+  - Crear reseña
+  - Modificar reseña
+  - Eliminar reseña
+  - Registrar nueva tarjeta
+  - Modificar tarjeta
+  - Eliminar tarjeta
+  - Crear ElaboraciónPlato (cantidad necesaria de un ingrediente para preparar un plato)
+  - Modificar ElaboraciónPlato
+  - Eliminar ElaboraciónPlato
+
+- Funcionalidades para modificar y eliminar una "ElaboracionPedido" FUNCIONALES
+
+- Se desplazó los componentes del CRUD de "ElaboraciónPlato" dentro de la carpeta "carta-comida"
+
+- CRUD de "ElaboraciónPlato" finalizado
+
+- CRUD de "Plato" finalizado
+
+## Semana del 10/02/25:
+
+- Se muestra un error cuando el usuario se está registrando y ocurre algún problema
+
+- Operaciones CRUD "POST" y "DELETE" de la entidad "Reseña" incorporadas
+
+- Operación CRUD "PUT" de la entidad "Reseña" incorporada (falta el listado de reseñas)
+
+- CRUD de la entidad "Reseña" FINALIZADO
+
+- Operaciones CRUD "POST" Y "DELETE" de la entidad "TarjetaCliente" incorporadas
+
+- Listado de tarjetas del cliente incorporado (TarjetaCliente)
+
+- Corrección de un error por el que a veces no se detectaba el pago o el mismo era realizado pero era imposible finalizar el pedido
+
+- Modificaciones a la url de la para utilizar los servicios de la entidad "Reseña" (cambió la URL en el back-end)
+
+- Ahora es posible elegir la tarjeta con la que el cliente realizará el pago desde el propio pedido
+
+## Semana del 17/02/25:
+
+- Modificación del html y estilos para adaptar la aplicación a dispositivos móviles en los componentes:
+  - Proveedor
+  - Ingrediente
+  - TipoPlato
+  - Mesa
+  - Tarjeta
+  - Reseña
+  - TarjetaCliente
+  - Bebida
+  - ElaboraciónPlato
+  - Plato
+
+- Se incorporó una funcionalidad que pemite eliminar los platos o bebidas del pedido que aún no fueron entregados ("cancelar plato/bebida")
+
+- Se incorporó la operación "PUT" del CRUD de la entidad "TarjetaCliente"
+
+- Correcciones visuales
+
+- Se incorporaron rutas protegidas, evitando que un usuario cliente acceda a funciones correspondientes a un usuario empleado. En su lugar, muestra una página de error.
+
+- Limpieza de comentarios
