@@ -5,304 +5,302 @@
 ### Proveedor
 
 {
-  id?: number
+id?: number
 
-  cuit!: string
+cuit!: string
 
-  razonSocial!: string
+razonSocial!: string
 
-  direccion!: string
+direccion!: string
 
-  ciudad!: string
+ciudad!: string
 
-  provincia!: string
+provincia!: string
 
-  pais!: string
+pais!: string
 
-  telefono!: string
+telefono!: string
 
-  email!: string
+email!: string
 
-  ingredienteDeProveedor = new Collection<IngredienteDeProveedor>(this)
+ingredienteDeProveedor = new Collection<IngredienteDeProveedor>(this)
 
-  bebidasDeProveedor = new Collection<BebidaDeProveedor>(this)
+bebidasDeProveedor = new Collection<BebidaDeProveedor>(this)
 }
 
 ### Bebida
 
 {
-  codBebida?: number
+codBebida?: number
 
-  descripcion!: string
+descripcion!: string
 
-  stock!: number
+stock!: number
 
-  unidadMedida!: string
+unidadMedida!: string
 
-  contenido!: number
+contenido!: number
 
-  precio!: number
+precio!: number
 
-  alcohol?: string
+alcohol?: string
 
-  imagen?: string | null
+imagen?: string | null
 
-  bebidasPedido = new Collection<BebidaPedido>(this)
+bebidasPedido = new Collection<BebidaPedido>(this)
 
-  bebidasDeProveedor = new Collection<BebidaDeProveedor>(this)
+bebidasDeProveedor = new Collection<BebidaDeProveedor>(this)
 }
 
 ### BebidaDeProveedor
 
 {
-  bebida!: Rel<Bebida>
+bebida!: Rel<Bebida>
 
-  proveedor!: Rel<Proveedor>
+proveedor!: Rel<Proveedor>
 }
 
 ### Ingrediente
 
 {
-  codigo?: number
+codigo?: number
 
-  descIngre!: string
+descIngre!: string
 
-  puntoDePedido!: number
+puntoDePedido!: number
 
-  stock!: number
+stock!: number
 
-  unidadMedida!: string
+unidadMedida!: string
 
-  aptoCeliacos!: boolean
+aptoCeliacos!: boolean
 
-  aptoVegetarianos!: boolean
+aptoVegetarianos!: boolean
 
-  aptoVeganos!: boolean
+aptoVeganos!: boolean
 
-  elaboracionesPlato = new Collection<ElaboracionPlato>(this)
+elaboracionesPlato = new Collection<ElaboracionPlato>(this)
 
-  ingredienteDeProveedor = new Collection<IngredienteDeProveedor>(this)
+ingredienteDeProveedor = new Collection<IngredienteDeProveedor>(this)
 }
 
 ### IngredienteDeProveedor
 
 {
-  ingrediente!: Rel<Ingrediente>
+ingrediente!: Rel<Ingrediente>
 
-  proveedor!: Rel<Proveedor>
+proveedor!: Rel<Proveedor>
 }
 
 ### TipoPlato
 
 {
-  numPlato?: number
-  
-  descTPlato!: string
+numPlato?: number
 
-  platos = new Collection<Plato>(this)
+descTPlato!: string
+
+platos = new Collection<Plato>(this)
 }
 
 ### Plato
 
 {
-  numPlato?: number
+numPlato?: number
 
-  descripcion!: string
+descripcion!: string
 
-  tiempo!: number
+tiempo!: number
 
-  precio!: number
+precio!: number
 
-  aptoCeliacos!: boolean
+aptoCeliacos!: boolean
 
-  aptoVegetarianos!: boolean
+aptoVegetarianos!: boolean
 
-  aptoVeganos!: boolean
+aptoVeganos!: boolean
 
-  imagen?: string
+imagen?: string
 
-  tipoPlato!: Rel<TipoPlato>
+tipoPlato!: Rel<TipoPlato>
 
-  elaboracionesPlato = new Collection<ElaboracionPlato>(this)
+elaboracionesPlato = new Collection<ElaboracionPlato>(this)
 
-  platoPedidos = new Collection<PlatoPedido>(this)
+platoPedidos = new Collection<PlatoPedido>(this)
 }
 
 ### ElaboracionPlato
 
 {
-  ingrediente!: Rel<Ingrediente>
+ingrediente!: Rel<Ingrediente>
 
-  plato!: Rel<Plato>
+plato!: Rel<Plato>
 
-  cantidadNecesaria!: number
+cantidadNecesaria!: number
 }
 
 ### Usuario
 
 {
-  id?: number
+id?: number
 
-  nombre!: string
+nombre!: string
 
-  apellido!: string
+apellido!: string
 
-  email!: string
+email!: string
 
-  contrasenia!: string
+contrasenia!: string
 
-  telefono?: string
+telefono?: string
 
-  tipoUsuario!: string
+tipoUsuario!: string
 
-  pedidos = new Collection<Pedido>(this)
+pedidos = new Collection<Pedido>(this)
 
-  tarjetasCliente = new Collection<TarjetaCliente>(this)
+tarjetasCliente = new Collection<TarjetaCliente>(this)
 }
 
 ### Mesa
 
 {
-  nroMesa?: number
+nroMesa?: number
 
-  cantPersonasMax!: number 
+cantPersonasMax!: number
 
-  estado!: string
+estado!: string
 
-  pedidos = new Collection<Pedido>(this);
+pedidos = new Collection<Pedido>(this);
 }
 
 ### Pedido
 
 {
-  nroPed?: number
+nroPed?: number
 
-  estado: string = 'en curso'
+estado: string = 'en curso'
 
-  fecha?: Date
+fecha?: Date
 
-  hora?: string
+hora?: string
 
-  fechaCancelacion?: Date
+fechaCancelacion?: Date
 
-  horaCancelacion?: string
+horaCancelacion?: string
 
-  cliente!: Rel<Usuario>
+cliente!: Rel<Usuario>
 
-  mesa!: Rel<Mesa>
+mesa!: Rel<Mesa>
 
-  platosPedido = new Collection<PlatoPedido>(this)
+platosPedido = new Collection<PlatoPedido>(this)
 
-  bebidasPedido = new Collection<BebidaPedido>(this)
+bebidasPedido = new Collection<BebidaPedido>(this)
 
-  pago?: Rel<Pago>
+pago?: Rel<Pago>
 
-  resena?: Rel<Resena>
+resena?: Rel<Resena>
 }
 
 ### PlatoPedido
 
 {
-  pedido!: Rel<Pedido>
+pedido!: Rel<Pedido>
 
-  plato!: Rel<Plato>
+plato!: Rel<Plato>
 
-  fechaSolicitud?: Date
+fechaSolicitud?: Date
 
-  horaSolicitud?: string
+horaSolicitud?: string
 
-  cantidad!: number
+cantidad!: number
 
-  fechaEntrega?: Date
+fechaEntrega?: Date
 
-  horaEntrega?: string
+horaEntrega?: string
 
-  entregado?: boolean = false
+entregado?: boolean = false
 }
 
 ### BebidaPedido
 
 {
-  bebida!: Rel<Bebida>
+bebida!: Rel<Bebida>
 
-  pedido!: Rel<Pedido>
+pedido!: Rel<Pedido>
 
-  fechaSolicitud?: Date
+fechaSolicitud?: Date
 
-  horaSolicitud?: string
+horaSolicitud?: string
 
-  cantidad!: number
+cantidad!: number
 
-  fechaEntrega?: Date
+fechaEntrega?: Date
 
-  horaEntrega?: string
+horaEntrega?: string
 
-  entregado?: boolean = false
+entregado?: boolean = false
 }
 
 ### Tarjeta
 
 {
-  idTarjeta?: number
+idTarjeta?: number
 
-  descTarjeta!: string
+descTarjeta!: string
 
-  tarjetaClientes = new Collection<TarjetaCliente>(this)
+tarjetaClientes = new Collection<TarjetaCliente>(this)
 }
 
 ### TarjetaCliente
 
 {
-  nroTarjeta!: string;
+nroTarjeta!: string;
 
-  tipoTarjeta!: string;
+tipoTarjeta!: string;
 
-  bancoTarjeta!: string;
+bancoTarjeta!: string;
 
-  titular!: string;
+titular!: string;
 
-  vencimiento!: Date;
+vencimiento!: Date;
 
-  codSeguridad!: number;
+codSeguridad!: number;
 
-  tarjeta!: Rel<Tarjeta>;
+tarjeta!: Rel<Tarjeta>;
 
-  pagos = new Collection<Pago>(this)
+pagos = new Collection<Pago>(this)
 
-  cliente!: Rel<Usuario>
+cliente!: Rel<Usuario>
 }
 
 ### Pago
 
 {
-  pedido!: Rel<Pedido>;
+pedido!: Rel<Pedido>;
 
-  idPago!: string
+idPago!: string
 
-  fechaPago?: Date
+fechaPago?: Date
 
-  horaPago?: string
+horaPago?: string
 
-  importe!: number
+importe!: number
 
-  tarjetaCliente?: Rel<TarjetaCliente>
+tarjetaCliente?: Rel<TarjetaCliente>
 }
 
 ### Resena
 
 {
-  pedido!: Rel<Pedido>
+pedido!: Rel<Pedido>
 
-  fechaHoraResena?: Date
+fechaHoraResena?: Date
 
-  fechaHoraModificacion?: Date
+fechaHoraModificacion?: Date
 
-  cuerpo!: string
+cuerpo!: string
 
-  puntaje!: number
+puntaje!: number
 }
-
-
 
 ## End-Points:
 
@@ -348,5 +346,48 @@
 
 - response.body = {message: string, data: Proveedor}
 
-### 
+##################################################################################################################################################################
 
+### GET /api/platos/tipos
+
+- Función: Devuelve todos los tipos de plato registrados en el sistema
+
+- response.body = {message: string, data: TipoPlato[]}
+
+### GET /api/platos/tipos/:numPlato
+
+- Función: Devuelve un único tipo de plato según el "numPlato" ingresado
+
+- response.body = {message: string, data: TipoPlato[]}
+
+### POST /api/platos/tipos
+
+- Función: Registra un nuevo tipo de plato en el sistema
+
+- request.body = TipoPlato
+
+- response.body = {message: string, data: TipoPlato[]}
+
+### PUT /api/platos/tipos/:numPlato
+
+- Función: Actualiza un tipo de plato existente haciendo uso de los datos enviados
+
+- request.body = TipoPlato
+
+- response.body = {message: string, data: TipoPlato[]}
+
+### PATCH /api/platos/tipos/:numPlato
+
+- Función: Actualiza un tipo de plato existente, según el "numPlato" ingresado, haciendo uso de los datos enviados
+
+- request.body = TipoPlato?
+
+- response.body = {message: string, data: TipoPlato[]}
+
+### DELETE /api/platos/tipos/:numPlato
+
+- Función: Elimina un tipo de plato del sistema según el "numPlato" ingresado
+
+- response.body = {message: string, data: TipoPlato[]}
+
+##################################################################################################################################################################
