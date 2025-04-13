@@ -391,3 +391,47 @@ puntaje!: number
 - response.body = {message: string, data: TipoPlato[]}
 
 ##################################################################################################################################################################
+
+### GET /api/platos
+
+- Función: Devuelve todos los platos registrados en el sistema
+
+- response.body = {message: string, data: Plato[]}
+
+### GET /api/platos/:numPlato
+
+- Función: Devuelve un único plato según el "numPlato" ingresado
+
+- response.body = {message: string, data: Plato[]}
+
+### POST /api/platos
+
+- Función: Registra un nuevo plato en el sistema
+
+- request.body = Plato
+
+- response.body = {message: string, data: Plato[]}
+
+### PUT /api/platos/:numPlato
+
+- Función: Actualiza un plato existente haciendo uso de los datos enviados
+
+- request.body = Plato
+
+- response.body = {message: string, data: Plato[]}
+
+### PATCH /api/platos/:numPlato
+
+- Función: Actualiza un plato existente, según el "numPlato" ingresado, haciendo uso de los datos enviados
+
+- request.body = Plato?
+
+- response.body = {message: string, data: Plato[]}
+
+### DELETE /api/platos/:numPlato
+
+- Función: Elimina un plato del sistema según el "numPlato" ingresado
+
+- response.body = {message: string, data: Plato[]}
+
+##################################################################################################################################################################
