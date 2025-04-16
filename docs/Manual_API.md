@@ -358,7 +358,7 @@ puntaje!: number
 
 - Función: Devuelve un único tipo de plato según el "numPlato" ingresado
 
-- response.body = {message: string, data: TipoPlato[]}
+- response.body = {message: string, data: TipoPlato}
 
 ### POST /api/platos/tipos
 
@@ -366,7 +366,7 @@ puntaje!: number
 
 - request.body = TipoPlato
 
-- response.body = {message: string, data: TipoPlato[]}
+- response.body = {message: string, data: TipoPlato}
 
 ### PUT /api/platos/tipos/:numPlato
 
@@ -374,7 +374,7 @@ puntaje!: number
 
 - request.body = TipoPlato
 
-- response.body = {message: string, data: TipoPlato[]}
+- response.body = {message: string, data: TipoPlato}
 
 ### PATCH /api/platos/tipos/:numPlato
 
@@ -382,13 +382,13 @@ puntaje!: number
 
 - request.body = TipoPlato?
 
-- response.body = {message: string, data: TipoPlato[]}
+- response.body = {message: string, data: TipoPlato}
 
 ### DELETE /api/platos/tipos/:numPlato
 
 - Función: Elimina un tipo de plato del sistema según el "numPlato" ingresado
 
-- response.body = {message: string, data: TipoPlato[]}
+- response.body = {message: string, data: TipoPlato}
 
 ##################################################################################################################################################################
 
@@ -402,7 +402,7 @@ puntaje!: number
 
 - Función: Devuelve un único plato según el "numPlato" ingresado
 
-- response.body = {message: string, data: Plato[]}
+- response.body = {message: string, data: Plato}
 
 ### POST /api/platos
 
@@ -410,7 +410,7 @@ puntaje!: number
 
 - request.body = Plato
 
-- response.body = {message: string, data: Plato[]}
+- response.body = {message: string, data: Plato}
 
 ### PUT /api/platos/:numPlato
 
@@ -418,7 +418,7 @@ puntaje!: number
 
 - request.body = Plato
 
-- response.body = {message: string, data: Plato[]}
+- response.body = {message: string, data: Plato}
 
 ### PATCH /api/platos/:numPlato
 
@@ -426,12 +426,100 @@ puntaje!: number
 
 - request.body = Plato?
 
-- response.body = {message: string, data: Plato[]}
+- response.body = {message: string, data: Plato}
 
 ### DELETE /api/platos/:numPlato
 
 - Función: Elimina un plato del sistema según el "numPlato" ingresado
 
-- response.body = {message: string, data: Plato[]}
+- response.body = {message: string, data: Plato}
+
+##################################################################################################################################################################
+
+### GET /api/ingredientes
+
+- Función: Devuelve todos los ingredientes registrados en el sistema
+
+- response.body = {message: string, data: Ingrediente[]}
+
+### GET /api/ingredientes/:cod
+
+- Función: Devuelve un único ingrediente según el "cod" ingresado
+
+- response.body = {message: string, data: Ingrediente}
+
+### POST /api/ingredientes
+
+- Función: Registra un nuevo ingrediente en el sistema
+
+- request.body = Ingrediente
+
+- response.body = {message: string, data: Ingrediente}
+
+### PUT /api/ingredientes/:cod
+
+- Función: Actualiza un ingredientes existente haciendo uso de los datos enviados
+
+- request.body = Ingrediente
+
+- response.body = {message: string, data: Ingrediente}
+
+### PATCH /api/ingredientes/:cod
+
+- Función: Actualiza un ingrediente existente, según el "cod" ingresado, haciendo uso de los datos enviados
+
+- request.body = Ingrediente?
+
+- response.body = {message: string, data: Ingrediente}
+
+### DELETE /api/ingredientes/:cod
+
+- Función: Elimina un ingrediente del sistema según el "cod" ingresado
+
+- response.body = {message: string, data: Ingrediente}
+
+##################################################################################################################################################################
+
+### GET /api/tarjetas
+
+- Función: Devuelve todas las tarjetas registrados en el sistema
+
+- response.body = {message: string, data: Tarjeta[]}
+
+### GET /api/tarjetas/:idTarjeta
+
+- Función: Devuelve una única tarjeta según el "idTarjeta" ingresado
+
+- response.body = {message: string, data: Tarjeta}
+
+### POST /api/tarjetas
+
+- Función: Registra una nueva tarjeta en el sistema
+
+- request.body = Tarjeta
+
+- response.body = {message: string, data: Tarjeta}
+
+### PUT /api/tarjetas/:idTarjeta
+
+- Función: Actualiza una tarjeta existente haciendo uso de los datos enviados
+
+- request.body = Tarjeta
+
+- response.body = {message: string, data: Tarjeta}
+
+### PATCH /api/tarjetas/:idTarjeta
+
+- Función: Actualiza una tarjeta existente, según el "idTarjeta" ingresado, haciendo uso de los datos enviados
+
+- request.body = Tarjeta?
+
+- response.body = {message: string, data: Tarjeta}
+
+### DELETE /api/tarjetas/:idTarjeta
+
+- Función: Elimina una tarjeta del sistema según el "idTarjeta" ingresado
+
+- response.body = {message: string, data: Tarjeta}
 
 ##################################################################################################################################################################
