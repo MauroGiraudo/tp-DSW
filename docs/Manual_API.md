@@ -522,4 +522,255 @@ puntaje!: number
 
 - response.body = {message: string, data: Tarjeta}
 
-##################################################################################################################################################################
+################################################################################ #################################################################################
+
+### GET /api/bebidas
+
+- Función: Devuelve todas las bebidas registradas en el sistema
+
+- response.body = {message: string, data: Bebida[]}
+
+### GET /api/bebidas/:codBebida
+
+- Función: Devuelve una única bebida según el "codBebida" ingresado
+
+- response.body = {message: string, data: Bebida}
+
+### POST /api/bebidas
+
+- Función: Registra una nueva bebida en el sistema
+
+- request.body = Bebida
+
+- response.body = Bebida
+
+### PUT /api/bebidas/:codBebida
+
+- Función: Actualiza una bebida existente haciendo uso de los datos enviados
+
+- request.body = Bebida
+
+- response.body = {message: string, data: Bebida}
+
+### PATCH /api/bebidas/:codBebida
+
+- Función: Actualiza una bebida existente, según el "codBebida" ingresado, haciendo uso de los datos enviados
+
+- request.body = Bebida?
+
+- response.body = {message: string, data: Bebida}
+
+### DELETE /api/bebidas/:codBebida
+
+- Función: Elimina una bebida del sistema según el "codBebida" ingresado
+
+- response.body = {message: string, data: Bebida}
+  ##################################################################################################################################################################
+
+### GET /api/mesas
+
+- Función: Devuelve todas las mesas registradas en el sistema
+
+- response.body = {message: string, data: Mesa[]}
+
+### GET /api/mesas/:nroMesa
+
+- Función: Devuelve una única mesa según el "nroMesa" ingresado
+
+- response.body = {message: string, data: Mesa}
+
+### POST /api/mesas
+
+- Función: Registra una nueva mesa en el sistema
+
+- request.body = Mesa
+
+- response.body = Mesa
+
+### PUT /api/mesas/:nroMesa
+
+- Función: Actualiza una mesa existente haciendo uso de los datos enviados
+
+- request.body = Mesa
+
+- response.body = {message: string, data: Mesa}
+
+### PATCH /api/mesas/:nroMesa
+
+- Función: Actualiza una mesa existente, según el "nroMesa" ingresado, haciendo uso de los datos enviados
+
+- request.body = Mesa?
+
+- response.body = {message: string, data: Mesa}
+
+### DELETE /api/mesas/:nroMesa
+
+- Función: Elimina una mesa del sistema según el "nroMesa" ingresado
+
+- response.body = {message: string, data: Mesa}
+  ##################################################################################################################################################################
+
+### GET /api/usuario
+
+- Función: Devuelve todas los usuarios registradas en el sistema
+
+- response.body = {message: string, data: Mesa[]}
+
+### GET /api/mesas/:id
+
+- Función: Devuelve una única mesa según el "id" ingresado
+
+- response.body = {message: string, data: Mesa}
+
+### POST /api/mesas
+
+- Función: Registra una nueva mesa en el sistema
+
+- request.body = Mesa
+
+- response.body = Mesa
+
+### PUT /api/mesas/:id
+
+- Función: Actualiza una mesa existente haciendo uso de los datos enviados
+
+- request.body = Mesa
+
+- response.body = {message: string, data: Mesa}
+
+### PATCH /api/mesas/:id
+
+- Función: Actualiza una mesa existente, según el "id" ingresado, haciendo uso de los datos enviados
+
+- request.body = Mesa?
+
+- response.body = {message: string, data: Mesa}
+
+### DELETE /api/mesas/:id
+
+- Función: Elimina una mesa del sistema según el "id" ingresado
+
+- response.body = {message: string, data: Mesa}
+  ##################################################################################################################################################################
+
+### GET /api/clientes/:id/tarjetas
+
+- Función: Devuelve todas los tarjetas del usuario registradas en el sistema
+
+- response.body = {message: string, data: TarjetaCliente[]}
+
+### GET /api/clientes/:id/tarjetas/:idTarjeta
+
+- Función: Devuelve una única tarjeta del cliente según el "id" ingresado
+
+- response.body = {message: string, data: TarjetaCliente}
+
+### POST /api/clientes/:id/tarjetas
+
+- Función: Registra una nueva tarjeta del cliente en el sistema
+
+- request.body = TarjetaCliente
+
+- response.body = {message: string, data: TarjetaCliente}
+
+### PUT /api/clientes/:id/tarjetas/:idTarjeta
+
+- Función: Actualiza una tarjeta del cliente existente haciendo uso de los datos enviados
+
+- request.body = TarjetaCliente
+
+- response.body = {message: string, data: TarjetaCliente}
+
+### DELETE /api/clientes/:id/tarjetas/:idTarjeta
+
+- Función: Elimina una tarjeta del cliente del sistema según el "id" ingresado
+
+- response.body = {message: string, data: TarjetaCliente}
+  ##################################################################################################################################################################
+
+### GET /api/resenas
+
+- Función: Devuelve todas las reseñas del pedido registradas en el sistema
+
+- response.body = {message: string, data: Resena[]}
+
+### GET /api/clientes/:id/pedidos/:nroPed/resena
+
+- Función: Devuelve una única reseña del cliente según el "id" ingresado
+
+- response.body = {message: string, data: Resena}
+
+### POST /api/clientes/:id/pedidos/:nroPed/resena
+
+- Función: Registra una nueva reseña del cliente en el sistema
+
+- response.body = {
+  message: string,
+  data: {
+  pedido: {
+  nroPed: number,
+  estado: string,
+  fecha: string,
+  hora: string,
+  fechaCancelacion: string | null,
+  horaCancelacion: string | null,
+  cliente: {
+  id: number,
+  nombre: string,
+  apellido: string,
+  email: string,
+  contrasenia: string,
+  telefono: string,
+  tipoUsuario: string
+  },
+  mesa: number,
+  pago: any | null,
+  resena: any | null
+  },
+  fechaHoraResena: string,
+  fechaHoraModificacion: string,
+  cuerpo: string,
+  puntaje: number
+  }
+  }
+
+### PUT /api/clientes/:id/pedidos/:nroPed/resena
+
+- Función: Actualiza una tarjeta del cliente existente haciendo uso de los datos enviados
+
+- response.body = {
+  message: string,
+  data: {
+  pedido: {
+  nroPed: number,
+  estado: string,
+  fecha: string,
+  hora: string,
+  fechaCancelacion: string | null,
+  horaCancelacion: string | null,
+  cliente: {
+  id: number,
+  nombre: string,
+  apellido: string,
+  email: string,
+  contrasenia: string,
+  telefono: string,
+  tipoUsuario: string
+  },
+  mesa: number,
+  pago: any | null,
+  resena: any | null
+  },
+  fechaHoraResena: string,
+  fechaHoraModificacion: string,
+  cuerpo: string,
+  puntaje: number
+  }
+  }
+
+### DELETE /api/clientes/:id/pedidos/:nroPed/resena
+
+- Función: Elimina una tarjeta del cliente del sistema según el "id" ingresado
+
+- response.body = {message: string, data: Resena}
+  ##################################################################################################################################################################
